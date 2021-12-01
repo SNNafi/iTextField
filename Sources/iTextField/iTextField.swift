@@ -73,7 +73,10 @@ public struct iTextField: UIViewRepresentable {
     private func setProperties(_ textField: UITextField) {
         // Accessing the Text Attributes
         textField.text = text
-        textField.placeholder = placeholder
+        textField.attributedPlaceholder =  NSAttributedString(
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: foregroundColor]
+        )
         textField.font = font
         textField.textColor = foregroundColor
         if let textAlignment = textAlignment {
