@@ -228,7 +228,7 @@ public struct iTextField: UIViewRepresentable {
         }
         
         @objc func textFieldDidChange(_ textField: UITextField) {
-            text = textField.text ?? ""
+           // text = textField.text ?? ""
             didChange()
         }
         
